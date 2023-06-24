@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aloccated resources</title>
+    <meta charset="utf-8">
+    <title>ReqResources</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="colorlib.com">
+
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/material-design-iconic-font@2.2.0/dist/css/material-design-iconic-font.min.css">
+
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="wrapper">
+    <form action="/form1" id="wizard" method="get">
+        <!-- SECTION 1 -->
+        <section>
+            <div class="inner">
+                <div class="image-holder">
+                    <img src="{{ url_for('static', filename='images/pg2.jpg') }}" alt="">
+                </div>
+                <div class="form-content">
+                    <div class="form-header">
+                        <h3>Allocated Resources</h3>
+                    </div>
+                    <p></p>
+                    <div class="form-row">
+                        <div class="select">
+                            <div class="font-weight-bold">{{ available }}</div>
+                            <div class="form-holder"></div>
+                        </div>
+                        <div class="select">
+                            <div class="font-weight-bold">{{ alloted }}</div>
+                        </div>
+                        <div class="select">
+                            <div class="font-weight-bold">{{ remain }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+</div>
+</body>
+</html>

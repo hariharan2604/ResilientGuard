@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ReqResources</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="colorlib.com">
+
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/material-design-iconic-font@2.2.0/dist/css/material-design-iconic-font.min.css">
+
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="wrapper">
+    <form action="/form1" id="wizard" method="get">
+        <!-- SECTION 1 -->
+        <section>
+            <div class="inner">
+                <div class="image-holder">
+                    <img src="{{ url_for('static', filename='images/pg2.jpg') }}" alt="">
+                </div>
+                <div class="form-content">
+                    <div class="form-header">
+                        <h3>Disaster Detail</h3>
+                    </div>
+                    <p></p>
+                    <div class="form-row">
+                        <div class="select">
+                            <!--                            <div class="form-holder">-->
+
+                            <!--                                &lt;!&ndash;                                <i class="zmdi zmdi-caret-down"></i>&ndash;&gt;-->
+                            <!--                            </div>-->
+                            <!--                            <div class="select-control">Disaster Group</div>-->
+                            <label for="group">Group:</label>
+                            <select id="group" name="sgroup">
+                                <option value="Hydrological">Hydrological</option>
+                                <option value="Meteorological">Meteorological</option>
+                                <option value="Biological">Biological</option>
+                                <option value="Geophysical">Geophysical</option>
+                                <option value="Climatological">Climatological</option>
+                            </select>
+                        </div>
+                        <div class="form-holder"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="select">
+                            <!--                            <div class="form-holder">-->
+                            <!--                                &lt;!&ndash;                                <div class="select-control">Type</div>&ndash;&gt;-->
+                            <!--                                &lt;!&ndash;                                <i class="zmdi zmdi-caret-down"></i>&ndash;&gt;-->
+                            <!--                            </div>-->
+                            <label for="type">Type:</label>
+                            <select id="type" name="dtype">
+                                <option value="Flood">Flood</option>
+                                <option value="Storm">Storm</option>
+                                <option value="Drought">Drought</option>
+                                <option value="Landslide">Landslide</option>
+                                <option value="Epidemic">Epidemic</option>
+                                <option value="Earthquake">Earthquake</option>
+                                <option value="Wildfire">Wildfire</option>
+                            </select>
+                        </div>
+                        <div class="form-holder"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-holder w-100">
+                            <textarea name="description" id="" placeholder="Description" class="form-control"
+                                      style="height: 99px;"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="submit" value="Submit" id="submit">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--        <h2></h2>-->
+        <!--        <section>-->
+        <!--            <div class="inner">-->
+        <!--                <div class="image-holder">-->
+        <!--                    <img src="{{ url_for('static', filename='images/pg1.jpg') }}" alt="">-->
+        <!--                </div>-->
+        <!--                <div class="form-content">-->
+        <!--                    <div class="form-header">-->
+        <!--                        <h3>Reporter's Details</h3>-->
+        <!--                    </div>-->
+        <!--                    <p>Please fill with your details</p>-->
+        <!--                    <div class="form-row">-->
+        <!--                        <div class="form-holder">-->
+        <!--                            <input type="text" placeholder="First Name" class="form-control" name="first_name">-->
+        <!--                        </div>-->
+        <!--                        <div class="form-holder">-->
+        <!--                            <input type="text" placeholder="Last Name" class="form-control" name="last_name">-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                    <div class="form-row">-->
+        <!--                        <div class="form-holder">-->
+        <!--                            <input type="email" placeholder="Your Email" class="form-control" name="email">-->
+        <!--                        </div>-->
+        <!--                        <div class="form-holder">-->
+        <!--                            <input type="text" placeholder="Phone Number" class="form-control" name="phone_number">-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                    <div class="form-row">-->
+        <!--                        <div class="form-holder">-->
+        <!--                            <input type="text" placeholder="Designation" class="form-control" name="designation">-->
+        <!--                        </div>-->
+        <!--                        <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">-->
+        <!--                            <div class="checkbox-tick">-->
+        <!--                                <label class="male">-->
+        <!--                                    <input type="radio" name="gender" value="male" checked> Male<br>-->
+        <!--                                    <span class="checkmark"></span>-->
+        <!--                                </label>-->
+        <!--                                <label class="female">-->
+        <!--                                    <input type="radio" name="gender" value="female"> Female<br>-->
+        <!--                                    <span class="checkmark"></span>-->
+        <!--                                </label>-->
+        <!--                            </div>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </section>-->
+
+        <!--        &lt;!&ndash; SECTION 2 &ndash;&gt;-->
+        <!--        <h2></h2>-->
+
+
+        <!--        &lt;!&ndash; SECTION 3 &ndash;&gt;-->
+        <!--        <h2></h2>-->
+        <!--        <section>-->
+        <!--            <div class="inner">-->
+        <!--                <div class="image-holder">-->
+        <!--                    <img src="{{ url_for('static', filename='images/pg3.jpg') }}" alt="">-->
+        <!--                </div>-->
+        <!--                <div class="form-content">-->
+        <!--                    <div class="form-header">-->
+        <!--                        <h3>Contact Us</h3>-->
+        <!--                    </div>-->
+        <!--                    <p></p>-->
+        <!--                    <div class="form-row">-->
+        <!--                        <div class="form-holder w-100">-->
+        <!--                            <p>Email:resilientguard@gmail.com</p>-->
+        <!--                            <p>Mobile:+91 9360745166</p>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--                <button type="submit" value="Submit">Submit</button>-->
+        <!--            </div>-->
+        <!--        </section>-->
+
+    </form>
+</div>
+
+<!-- JQUERY -->
+<!--<script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>-->
+
+<!-- JQUERY STEP -->
+<!--<script src="{{ url_for('static', filename='js/jquery.steps.js') }}"></script>-->
+<!--<script src="{{ url_for('static', filename='js/main.js') }}"></script>-->
+<!-- Template created and distributed by Colorlib -->
+</body>
+</html>
